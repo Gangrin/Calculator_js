@@ -31,16 +31,19 @@
     <input type="button" value="=" onclick="getResult()"/>
   </p>
     <script>
-        var myEquation = new Array();
+        var myEquation = [];
         function getInt() {
           var equationElement = document.getElementById("equation");
           var currentEquation = equationElement.value;
           equationElement.value = currentEquation + event.target.value;
           myEquation.push(event.target.value);
+          document.getElementById("test").value = myEquation;
         }
 
         function clearAll() {
           document.getElementById("equation").value = "";
+          myEquation = [];
+          document.getElementById("test").value = "";
         }
 
 
