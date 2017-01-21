@@ -1,1 +1,50 @@
 <!DOCTYPE html>
+<html>
+<head>
+<title>Calculator in JS</title>
+</head>
+<body>
+    <input type="text" id="equation" readonly/>
+  <p>
+    <input type="button" value="1" onclick="getInt()"/>
+    <input type="button" value="2" onclick="getInt()"/>
+    <input type="button" value="3" onclick="getInt()"/>
+    <input type="button" value="+" onclick="getInt()"/>
+    <input type="button" value="*" onclick="getInt()"/>
+  </p>
+  <p>
+    <input type="button" value="4" onclick="getInt()"/>
+    <input type="button" value="5" onclick="getInt()"/>
+    <input type="button" value="6" onclick="getInt()"/>
+    <input type="button" value="-" onclick="getInt()"/>
+    <input type="button" value="/" onclick="getInt()"/>
+  </p>
+  <p>
+    <input type="button" value="7" onclick="getInt()"/>
+    <input type="button" value="8" onclick="getInt()"/>
+    <input type="button" value="9" onclick="getInt()"/>
+  </p>
+  <p>
+    <input type="button" value="0" onclick="getInt()"/>
+    <input type="button" value="C" onclick="clearAll()"/>
+    <input type="button" value="=" onclick="getResult()"/>
+  </p>
+    <script>
+        var myEquation = new array;
+        function getInt() {
+          var equationElement = document.getElementById("equation");
+          var currentEquation = equationElement.value;
+          equationElement.value = currentEquation + event.target.value;
+          myEquation.push(event.target.value);
+        }
+
+        function clearAll() {
+          document.getElementById("equation").value = "";
+        }
+
+
+
+
+    </script>
+</body>
+</html>
