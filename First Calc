@@ -5,6 +5,7 @@
 </head>
 <body>
     <input type="text" id="equation" readonly/>
+    <input type="text" id="test" readonly/>
   <p>
     <input type="button" value="1" onclick="getInt()"/>
     <input type="button" value="2" onclick="getInt()"/>
@@ -30,7 +31,7 @@
     <input type="button" value="=" onclick="getResult()"/>
   </p>
     <script>
-        var myEquation = new array;
+        var myEquation = new Array();
         function getInt() {
           var equationElement = document.getElementById("equation");
           var currentEquation = equationElement.value;
