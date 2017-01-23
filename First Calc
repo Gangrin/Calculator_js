@@ -33,13 +33,33 @@
     <script>
 
         var myEquation = [];
+        var helpOne = 0;
+        var helpTwo = 0;
 
         function getInt() {
           var equationElement = document.getElementById("equation");
           var currentEquation = equationElement.value;
           equationElement.value = currentEquation + event.target.value;
-          myEquation.push(event.target.value);
+          //myEquation.push(event.target.value);
+
+
+          if (helpTwo > 0) {
+            myEquation[helpOne] = myEquation[helpOne] + event.target.value;
+          }
+
+          if (helpTwo == 0) {
+            myEquation[helpOne] = event.target.value;
+          }
+
+
+          if (event.target.value == "+", event.target.value == "-", event.target.value == "*", event.target.value == "/") {
+            helpOne++;
+            myEquation[helpOne] = event.target.value;
+            helpOne++;
+          }
+
           document.getElementById("test").value = myEquation;
+          helpTwo++;
         }
 
         function clearAll() {
@@ -55,21 +75,27 @@
           for (var i = 0; i < myEquation.length; i++) {
 
             if (myEquation[i] === "+") {
+              signs.push("plus");
               signs.push(i);
             }
 
             else if (myEquation[i] === "-") {
+              signs.push("minus");
               signs.push(i);
             }
 
             else if (myEquation[i] === "*") {
+              signs.push("multiply");
               signs.push(i);
             }
 
             else if (myEquation[i] === "/") {
+              signs.push("share");
               signs.push(i);
             }
           }
+
+
 
           document.getElementById("test").value = signs;
         }
