@@ -31,7 +31,9 @@
     <input type="button" value="=" onclick="getResult()"/>
   </p>
     <script>
+
         var myEquation = [];
+
         function getInt() {
           var equationElement = document.getElementById("equation");
           var currentEquation = equationElement.value;
@@ -44,6 +46,32 @@
           document.getElementById("equation").value = "";
           myEquation = [];
           document.getElementById("test").value = "";
+        }
+
+        function getResult() {
+
+          var signs = [];
+
+          for (var i = 0; i < myEquation.length; i++) {
+
+            if (myEquation[i] === "+") {
+              signs.push(i);
+            }
+
+            else if (myEquation[i] === "-") {
+              signs.push(i);
+            }
+
+            else if (myEquation[i] === "*") {
+              signs.push(i);
+            }
+
+            else if (myEquation[i] === "/") {
+              signs.push(i);
+            }
+          }
+
+          document.getElementById("test").value = signs;
         }
 
 
