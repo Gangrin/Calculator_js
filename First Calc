@@ -40,39 +40,34 @@
           var equationElement = document.getElementById("equation");
           var currentEquation = equationElement.value;
           equationElement.value = currentEquation + event.target.value;
-          //myEquation.push(event.target.value);
 
           if (helpTwo === 0) {
+
             if (event.target.value === "+" || event.target.value === "-" ||
             event.target.value === "*" || event.target.value === "/") {
               document.getElementById("equation").value = "error";
             }
+
             else {
               myEquation[helpOne] = event.target.value;
             }
           }
+
           else {
+
             if (event.target.value === "+" || event.target.value === "-" ||
             event.target.value === "*" || event.target.value === "/") {
               helpOne++;
               myEquation[helpOne] = event.target.value;
               helpOne++
             }
+
             else {
+
               if (myEquation[helpOne] == null) {
-                if (myEquation[helpOne - 1] === "+") {
-                  myEquation[helpOne] = event.target.value;
-                }
-                else if (myEquation[helpOne - 1] === "-") {
-                  myEquation[helpOne] = event.target.value;
-                }
-                else if (myEquation[helpOne - 1] === "*") {
-                  myEquation[helpOne] = event.target.value;
-                }
-                else if (myEquation[helpOne - 1] === "/") {
-                  myEquation[helpOne] = event.target.value;
-                }
+                myEquation[helpOne] = event.target.value;
               }
+
               else {
                 myEquation[helpOne] = myEquation[helpOne] + event.target.value;
               }
@@ -121,7 +116,17 @@
             }
           }
 
+          for (var i = 0; i < myEquation.length; i++) {
+
+            if (myEquation[i] !== "+" || myEquation[i] !== "-" ||
+                myEquation[i] !== "*" || myEquation[i] !== "/") {
+                  myEquation[i] = parseInt(myEquation[i], 10);
+                }
+          }
+
+
           for (var i = 0; i < signs.length - 1; i++) {
+
             if (signs[i] === "+") {
               sig = signs[i + 1];
               a = myEquation[sig - 1];
