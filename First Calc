@@ -87,32 +87,46 @@
           document.getElementById("equation").value = "";
           myEquation = [];
           document.getElementById("test").value = "";
+          helpOne = 0;
+          helpTwo = 0;
         }
 
         function getResult() {
 
           var signs = [];
+          var sig = 0;
+          var a = Number;
+          var b = Number;
 
           for (var i = 0; i < myEquation.length; i++) {
 
             if (myEquation[i] === "+") {
-              signs.push("plus");
+              signs.push("+");
               signs.push(i);
             }
 
             else if (myEquation[i] === "-") {
-              signs.push("minus");
+              signs.push("-");
               signs.push(i);
             }
 
             else if (myEquation[i] === "*") {
-              signs.push("multiply");
+              signs.push("*");
               signs.push(i);
             }
 
             else if (myEquation[i] === "/") {
-              signs.push("share");
+              signs.push("/");
               signs.push(i);
+            }
+          }
+
+          for (var i = 0; i < signs.length - 1; i++) {
+            if (signs[i] === "+") {
+              sig = signs[i + 1];
+              a = myEquation[sig - 1];
+              b = myEquation[sig + 1];
+              document.getElementById("equation").value = (a + b);
             }
           }
 
@@ -120,6 +134,7 @@
 
           document.getElementById("test").value = signs;
         }
+
 
 
 
