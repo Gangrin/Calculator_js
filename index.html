@@ -36,6 +36,14 @@
         var helpOne = 0;
         var helpTwo = 0;
 
+        function fillTestField(value) {
+          var testValue = ""
+          if (value instanceof Array) {
+            testValue = value.join(' ')
+          }
+          document.getElementById("test").value = testValue;
+        }
+
         function getInt() {
           var equationElement = document.getElementById("equation");
           var currentEquation = equationElement.value;
@@ -74,14 +82,14 @@
             }
           }
 
-          document.getElementById("test").value = myEquation;
+          fillTestField(myEquation);
           helpTwo++;
         }
 
         function clearAll() {
           document.getElementById("equation").value = "";
           myEquation = [];
-          document.getElementById("test").value = "";
+          fillTestField();
           helpOne = 0;
           helpTwo = 0;
         }
@@ -145,7 +153,7 @@
 
 
 
-          document.getElementById("test").value = signs;
+          fillTestField(signs);
         }
 
 
