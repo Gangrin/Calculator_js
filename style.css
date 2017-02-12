@@ -1,0 +1,39 @@
+.buttonNumber {
+  width: 50px;
+  height: 50px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  border: 5px outset #424242;
+  background-color: #7c7c7c;
+  color: #ffffff;
+  box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.75);
+  font-family: 'Caveat Brush', cursive;
+  font-size: 30px;
+  cursor: default;
+}
+.buttonNumber:active {
+  width: 50px;
+  height: 50px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  border: 5px inset #424242;
+  background-color: #7c7c7c;
+  color: #c1c1c1;
+  box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.75);
+  font-family: 'Caveat Brush', cursive;
+  font-size: 30px;
+  cursor: default;
+}
+.buttonDisplay {
+  width: 265px;
+  height: 40px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  border: 5px solid #424242;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.75);
+  font-family: 'Caveat Brush', cursive;
+  font-size: 35px;
+  cursor: not-allowed;
+}

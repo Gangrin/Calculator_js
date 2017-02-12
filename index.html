@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
   <title>Calculator in JS</title>
 </head>
 <body>
-    <input type="text" id="equation" readonly/>
+    <input class="buttonDisplay" type="text" id="equation" readonly/>
     <input type="text" id="test" readonly/>
   <p>
-    <input type="button" value="1" onclick="getInt()"/>
-    <input type="button" value="2" onclick="getInt()"/>
-    <input type="button" value="3" onclick="getInt()"/>
-    <input type="button" value="+" onclick="getInt()"/>
-    <input type="button" value="*" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="1" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="2" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="3" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="+" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="*" onclick="getInt()"/>
   </p>
   <p>
-    <input type="button" value="4" onclick="getInt()"/>
-    <input type="button" value="5" onclick="getInt()"/>
-    <input type="button" value="6" onclick="getInt()"/>
-    <input type="button" value="-" onclick="getInt()"/>
-    <input type="button" value="/" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="4" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="5" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="6" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="-" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="/" onclick="getInt()"/>
   </p>
   <p>
-    <input type="button" value="7" onclick="getInt()"/>
-    <input type="button" value="8" onclick="getInt()"/>
-    <input type="button" value="9" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="7" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="8" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="9" onclick="getInt()"/>
   </p>
   <p>
-    <input type="button" value="0" onclick="getInt()"/>
-    <input type="button" value="C" onclick="clearAll()"/>
-    <input type="button" value="=" onclick="getResult()"/>
+    <input class="buttonNumber" type="button" value="0" onclick="getInt()"/>
+    <input class="buttonNumber" type="button" value="C" onclick="clearAll()"/>
+    <input class="buttonNumber" type="button" value="=" onclick="getResult()"/>
   </p>
     <script src="script.js"></script>
 </body>
