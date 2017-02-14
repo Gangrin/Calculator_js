@@ -10,7 +10,7 @@ function fillTestField(value) {
   document.getElementById("test").value = testValue;
 }
 
-function getInt() {
+function getInt(event) {
   var equationElement = document.getElementById("equation");
   var currentEquation = equationElement.value;
   equationElement.value = currentEquation + event.target.value;
